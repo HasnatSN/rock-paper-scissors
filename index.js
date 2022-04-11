@@ -9,10 +9,10 @@ let computerChoice = () => {
 comChoice = computerChoice();
 console.log(comChoice);
 
-// userInput = "Rock";
-// userInput = userInput.toLowerCase();
-userInput = window.prompt("Your choice: ").toLowerCase();
-console.log(userInput);
+// // userInput = "Rock";
+// // userInput = userInput.toLowerCase();
+// userInput = window.prompt("Your choice: ").toLowerCase();
+// console.log(userInput);
 
 switch (userInput) {
   case "rock":
