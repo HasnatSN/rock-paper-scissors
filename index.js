@@ -91,12 +91,9 @@ function addResult(option, comOption, result) {
 
 function gameOver(user_score, com_score) {
   if (user_score >= 5 || com_score >= 5) {
+    console.log("inside");
+    
     if (user_score > com_score) {
-      modalBg.classList.add("bg-active");
-
-      user_score = 0;
-      com_score = 0;
-
       if (user_score > com_score) {
         modalTxt.textContent = "You won!";
       } else if (user_score < com_score) {
@@ -105,42 +102,14 @@ function gameOver(user_score, com_score) {
         modalTxt.textContent = "It's a draw.";
       }
     }
+
+    modalBg.classList.add("bg-active");
+
+    user_score = 0;
+    com_score = 0;
   }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////////Halfway through I noticed that I really dislike my approach... Gonna try again, this time with cleaner code
 
