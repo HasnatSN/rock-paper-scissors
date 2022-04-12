@@ -8,6 +8,7 @@ const c_score = document.querySelector(".c_score");
 
 const modalBg = document.querySelector(".modal-bg");
 const modalTxt = document.querySelector(".modal-txt");
+const modalBtn = document.querySelector('.mdl-btn');
 
 let user_score = 0;
 let com_score = 0;
@@ -42,12 +43,17 @@ function randomOption() {
 }
 
 optionButtons.forEach((optionButton) => {
-  optionButton.addEventListener("click", (e) => {
+  optionButton.addEventListener("click", () => {
     const optionName = optionButton.dataset.option;
     const option = OPTIONS.find((option) => option.name === optionName);
     pickOption(option);
   });
 });
+
+modalBtn.addEventListener("click", () => {
+    console.log('logs')
+    playAgain();
+})
 
 function pickOption(option) {
   const comOption = randomOption();
@@ -99,12 +105,17 @@ function gameOver(user_score, com_score) {
     } else {
       modalTxt.textContent = "It's a draw.";
     }
-
     modalBg.classList.add("bg-active");
+  }
+}
 
+function playAgain () {
     user_score = 0;
     com_score = 0;
-  }
+    title_result.textContent = "Another Round!";
+    u_score.textContent = `Player: ${user_score}`;
+    c_score.textContent = `Com: ${com_score}`;
+    modalBg.classList.remove("bg-active");
 }
 
 ///////////////Halfway through I noticed that I really dislike my approach... Gonna try again, this time with cleaner code
