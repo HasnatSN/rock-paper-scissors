@@ -121,8 +121,8 @@
   /* MEDIA QUERIES */
   
   @media (max-width: 750px) {
-    .h1 {
-      font-size: 18px;
+    h1 {
+      font-size: 40px;
     }
   
     #scorboard {
