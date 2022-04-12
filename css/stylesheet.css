@@ -1,8 +1,145 @@
 * {
     box-sizing: border-box;
-}
-
-#wrapper {
-    width: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: darkslategray;
+    padding: 1.5rem;
+    width: 100%;
+    color: #ffc83d;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  h1 {
+    width: fit-content;
     margin: auto;
-}
+    font-family: "VT323", monospace;
+  }
+  
+  #summary {
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+  
+  #scoreboard {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  
+  #scoreboard div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .emoji {
+    font-size: 6rem;
+  }
+  
+  #options {
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  button {
+    padding: auto;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 8px;
+    background-color: darkslategray;
+    border-style: none;
+  }
+  
+  button:hover {
+    background-color: rgb(14, 92, 92);
+  }
+  
+  footer {
+    margin: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc83d;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .bg-active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+    align-items: center;
+  }
+  
+  .mdl-btn {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    color: white;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media (max-width: 750px) {
+    .h1 {
+      font-size: 18px;
+    }
+  
+    #scorboard {
+      font-size: 26px;
+    }
+  
+    #options {
+      gap: 10px;
+    }
+  
+    button {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .emoji {
+      font-size: 3rem;
+    }
+  }
+  
