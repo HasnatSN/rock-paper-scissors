@@ -7,6 +7,12 @@
     <title>R-P-S!</title>
     <meta name="author" content="HSN" />
     <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -15,30 +21,37 @@
 
     <main>
       <section id="summary">
-        <h2>Click on your Choice!</h2>
+        <h2 class="title">Click on your Choice!</h2>
         <p>First to reach 5 Points, wins!</p>
       </section>
 
       <section id="scoreboard">
-        <div>
-          <div class="emoji">❔</div>
-          <div>Player: 0</div>
+        <div class="user_score_div">
+          <div class="emoji u_option">❔</div>
+          <div class="u_score">Player: 0</div>
         </div>
 
-        <div>
-          <div class="emoji">❔</div>
-          <div>Com: 0</div>
+        <div class="com_score_div">
+          <div class="emoji c_option">❔</div>
+          <div class="c_score">Com: 0</div>
         </div>
       </section>
 
       <section id="options">
-        <button class="emoji">✊</button>
-        <button class="emoji">✋</button>
-        <button class="emoji">✌</button>
+        <button class="emoji" data-option="rock">✊</button>
+        <button class="emoji" data-option="paper">✋</button>
+        <button class="emoji" data-option="scissors">✌</button>
       </section>
     </main>
 
-    <footer>Made by HasnatSN</footer>
+      <div class="modal-bg">
+        <div class="modal">
+          <h2 class="modal-txt">Result</h2>
+          <button class="mdl-btn">Play Again?</button>
+        </div>
+      </div>
+
+    <footer>Made by HSN</footer>
   </body>
   <script src="index.js"></script>
 </html>
