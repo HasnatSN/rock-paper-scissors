@@ -91,7 +91,6 @@ function addResult(option, comOption, result) {
 
 function gameOver(user_score, com_score) {
   if (user_score >= 5 || com_score >= 5) {
-    console.log("inside");
 
     if (user_score > com_score) {
       modalTxt.textContent = "You won!";
